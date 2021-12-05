@@ -1,0 +1,371 @@
+
+$color-white: #fff;
+$color-primary: #FF6A00;
+$color-secondary: #00B5C2;
+$color-neutral: #E6E6E6;
+$color-neutral-orange: #FFA97D;
+$color-dark: #3F4444;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+ul { padding: 0;}
+li { list-style: none;}
+
+p {
+  color: $color-dark;
+  font-size: 16px;
+  line-height: 140%;
+
+  a { 
+    color: $color-primary;
+    &:hover { text-decoration: none;}
+  }
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+[class*="col-"] {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.col-6 { 
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.text-center { text-align: center; }
+.img-responsive {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  background-color:  $color-white;
+}
+
+.section {
+  margin-bottom: 100px;
+}
+.section__title {
+  font: bold 36px 'Baloo 2', cursive;
+  line-height: 43px;
+  margin-bottom: 20px;
+  color: $color-dark;
+}
+
+/* section main banner */
+.main__banner {
+  background-color:  #FF8B42;
+  padding: 160px 0;
+  color: $color-white;
+
+  .section__title, 
+  p { color: $color-white; }
+
+  .section__ctas {
+    margin-top: 50px;
+  }
+  .cta__white,
+  .cta__link-white {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    height: 42px;
+    line-height: 42px;
+  }
+  .cta__white {
+    background: $color-white;
+    border-radius: 4px;
+    color:  $color-primary;
+    margin-right: 20px;
+    width: 270px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .cta__link-white {
+    color:  $color-white;
+  }
+}
+
+/* section vantagens */
+.section--vantagens {
+  background-color:  $color-secondary;
+  color: $color-white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  p { color: $color-white;}
+
+  .lista__title {
+    margin: 10px 0;
+  }
+}
+
+/* section como funciona */
+.tab__item {
+  margin-bottom: 20px;
+  &.active {
+    .tab__link {
+      border-color: $color-secondary;
+      &::before {
+        content: '';
+        width: 2px;
+        height: 100%;
+        display: inline-block;
+        background-color: $color-secondary;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+.tab__link {
+  border: 1px solid #E6E6E6;
+  box-sizing: border-box;
+  padding: 20px;
+  display: block;
+  font-size: 16px;
+  color: $color-dark;
+  position: relative;
+  text-decoration: none;
+}
+.tab__title {
+  margin: 30px 0 15px;
+  font-size: 22px;
+  color: $color-dark;
+}
+.screen-wrapper {
+  display: flex;
+  justify-content: center;
+  
+  &::before {
+    content: '';
+    background: linear-gradient(32.88deg, #FFA97D 32.75%, #FF6A00 104.01%);
+    transform: rotate(-180deg);
+    border-radius: 100%;
+    display: block;
+    width: 490px;
+    height: 490px;
+  }
+
+  img {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* section pet lua */
+.section--mascote {
+  .section__title { text-align: center;}
+}
+.galeria__frame {
+  background-color: #F0F0F0;
+  border: 20px solid #F0F0F0;
+  box-shadow: 0px 7px 5px 1px rgba(89, 89, 89, 0.36);
+}
+.galeria__title {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* section coleção */
+.colecao {
+  display: flex;
+}
+.colecao__item {
+  width: 150px;
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.colecao__link {
+  text-decoration: none;
+  color: $color-dark;
+
+  &:hover {
+    color: $color-secondary;
+    img { border-color: $color-secondary; }
+  }
+  img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid $color-neutral;
+    border-radius: 100%;
+  }
+}
+
+.colecao__name {
+  margin-top: 12px;
+  text-align: center;
+  display: block;
+  
+}
+
+/* section prateleira */
+.prateleira {
+  display: flex;
+}
+.prateleira__item {
+  width: 270px;
+  border-radius: 8px;
+  border: 1px solid $color-neutral;
+  margin-right: 30px;
+  position: relative;
+  overflow: hidden;
+  &:last-child { margin-right: 0; }
+  &:hover {
+    border: 1px solid $color-secondary;
+    box-shadow: 0px 7px 20px 1px rgba(0, 91, 98, 0.25);
+  }
+}
+.prateleira__link {
+  text-decoration: none;
+  color: $color-dark;
+}
+.flag {
+  background-color: $color-primary;
+  color: $color-white;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 5px 12px 7px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.prateleira__title {
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  display: block;
+}
+.prateleira__preco-de {
+  color: #888;
+  font-size: 18px;
+  text-decoration: line-through;
+  margin: 0 10px 0 15px;
+  display: inline-block;
+}
+
+.prateleira__preco-por {
+  color: $color-dark;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* seção o que dizem nossos clientes */
+.estatistica__quantidade {
+  color: $color-primary;
+  display: block;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.estatistica__tipo {
+  font-weight: normal;
+  font-size: 22px;
+  color: $color-dark;
+}
+
+.cards {
+  display: flex;
+  margin: 50px 0 0 30px;
+  overflow-x: auto;
+}
+.card__item {
+  width: 270px;
+  height: 360px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  margin-right: 30px;
+  overflow: hidden;
+
+  &--blue {
+    background: #E9FCFE;
+    border: 1px solid $color-secondary;
+    padding: 20px;
+  }
+}
+
+.card__item-thumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+}
+
+.card__item-username {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0;
+}
