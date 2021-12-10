@@ -9,6 +9,7 @@ $color-dark: #3F4444;
 * {
   margin: 0;
   box-sizing: border-box;
+  border-spacing: 2px;
 }
 
 body {
@@ -92,6 +93,7 @@ p {
 }
 
 .text-center { text-align: center; }
+.text-left { text-align: left; }
 .img-responsive {
   max-width: 100%;
   display: block;
@@ -368,4 +370,97 @@ p {
   display: block;
   font-weight: bold;
   margin: 15px 0;
+}
+
+table {
+  background-color: $color-white;
+  width: 100%;
+  box-shadow: 0px 7px 20px 1px rgba(89, 89, 89, 0.25);
+  border-collapse: collapse;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  .item-destaque {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 10px 0;
+    width: 140px;
+    svg {
+      margin: 0 auto;
+      display: block
+    }
+  }
+
+  .comparativo__item {
+    padding: 10px;
+    height: 56px;
+
+  }
+  tr:nth-child(even) {
+    background-color: #F2F4F8;
+  }
+  th { padding: 0;}
+  td {
+    text-align: center;
+  }
+}
+.icon__true {
+  background: url('../images/icon-check.svg') center no-repeat;
+  text-indent: -9999px;
+}
+.icon__false {
+  background: url('../images/icon-false.svg') center no-repeat;
+  text-indent: -9999px;
+}
+
+.faq {
+  border: 1px solid #DEDEDE;
+  border-radius: 6px;
+  max-width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.accordion {
+  background-color: $color-white;
+  border: 0;
+  border-top: 1px solid #DEDEDE;
+  color: $color-dark;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  &:first-child{ border-top: 0;}
+}
+.accordion.active, .accordion:hover {
+  background-color: $color-primary;
+  color: $color-white;
+
+  &::after, &:before { color: $color-white;}
+}
+.accordion.active + .panel {
+  padding: 10px 18px;
+}
+.accordion:after {
+  content: '+'; /* Unicode character for "plus" sign (+) */
+  font-size: 18px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "-"; /* Unicode character for "minus" sign (-) */
+}
+.panel {
+  padding: 0 18px;
+  color: #888;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
