@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,20 +124,20 @@
           <div class="col-6">
             <ul class="tabs row">
               <li class="col-6 tab__item active">
-                <a href="" class="tab__link">1. Cadastre seu pet</a>
+                <a href="#tab-1" class="tab__link">1. Cadastre seu pet</a>
               </li>
               <li class="col-6 tab__item">
-                <a href="" class="tab__link">2. Adicione formas de contato</a>
+                <a href="#tab-2" class="tab__link">2. Adicione formas de contato</a>
               </li>
               <li class="col-6 tab__item">
-                <a href="" class="tab__link">3. Ative a plaquinha</a>
+                <a href="#tab-3" class="tab__link">3. Ative a plaquinha</a>
               </li>
               <li class="col-6 tab__item">
-                <a href="" class="tab__link">4. Receba alertas</a>
+                <a href="#tab-4" class="tab__link">4. Receba alertas</a>
               </li>
             </ul>
     
-            <div class="tab__content tab__01">
+            <div id="tab-1" class="tab__content active">
               <h3 class="tab__title">Cadastre o seu amiguinho</h3>
               <p class="tab__description">
                 Adicione fotos do pet e informações extra, exemplo, se o pet tem alguma doença ou recebe algum tratamento. <a href="" title="Acessar a plataforma">Acesse aqui a plataforma.</a>
@@ -149,7 +149,7 @@
               </p>
             </div>
 
-            <div class="tab__content tab__02">
+            <div id="tab-2" class="tab__content">
               <h3 class="tab__title">Adicione formas de contato</h3>
               <p class="tab__description">
                 Adicione fotos do pet e informações extra, exemplo, se o pet tem alguma doença ou recebe algum tratamento. <a href="" title="Acessar a plataforma">Acesse aqui a plataforma.</a>
@@ -161,7 +161,7 @@
               </p>
             </div>
 
-            <div class="tab__content tab__03">
+            <div id="tab-3" class="tab__content">
               <h3 class="tab__title">Ative a plaquinha inteligente</h3>
               <p class="tab__description">
                 Adicione fotos do pet e informações extra, exemplo, se o pet tem alguma doença ou recebe algum tratamento. <a href="" title="Acessar a plataforma">Acesse aqui a plataforma.</a>
@@ -173,7 +173,7 @@
               </p>
             </div>
 
-            <div class="tab__content tab__04">
+            <div id="tab-4" class="tab__content">
               <h3 class="tab__title">Receba alertas</h3>
               <p class="tab__description">
                 Adicione fotos do pet e informações extra, exemplo, se o pet tem alguma doença ou recebe algum tratamento. <a href="" title="Acessar a plataforma">Acesse aqui a plataforma.</a>
@@ -187,7 +187,18 @@
             
           </div>
           <div class="col-6 screen-wrapper">
-            <img src="images/mockup.png" alt="Tela de Cadastro">
+            <div id="tab-1-img" class="tab__thumb active">
+              <img src="images/mockup.png" alt="Tela de Cadastro" class="img-responsive">
+            </div>
+            <div id="tab-2-img" class="tab__thumb">
+              <img src="images/mocku.png" alt="Tela de Cadastro" class="img-responsive">
+            </div>
+            <div id="tab-3-img" class="tab__thumb">
+              <img src="images/mockup.png" alt="Tela de Cadastro" class="img-responsive">
+            </div>
+            <div id="tab-4-img" class="tab__thumb">
+              <img src="images/mockup.png" alt="Tela de Cadastro" class="img-responsive">
+            </div>
           </div>
         </div>
       </div>
@@ -195,16 +206,16 @@
 
     <section id="estilo" class="section">
       <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <img src="images/mulher-com-pets.png" alt="Mulher segurando seus pets">
-          </div>
-          <div class="col-6">
+        <div class="row verticaly-centered">
+          <div class="col-6 order-2">
             <h2 class="section__title">Produtos únicos e personalizados</h2>
             <p class="section__content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             </p>
+          </div>
+          <div class="col-6 order-1">
+            <img src="images/mulher-com-pets.png" alt="Mulher segurando seus pets" class="img-responsive">
           </div>
         </div>
       </div>
@@ -355,61 +366,62 @@
             <strong class="estatistica__tipo">Pets protegidos</strong>
           </div>
         </div>
+
+        <ul class="cards">
+          <li class="card__item card__item--image">
+            <img src="images/pet1.png" alt="Imagem do Pet" class="card__image">
+          </li>
+  
+          <li class="card__item card__item--blue">
+            <img src="images/pet1.png" alt="" class="card__item-thumbnail">
+            <span class="card__item-username">@hope.opersa</span>
+            <p class="card__item-description">
+              A pessoa que encontrar o animal lê o QR code com a câmera e vai aparecer os dados do animal! 
+              Simplesmente amei!!!
+            </p>
+          </li>
+          
+          <li class="card__item card__item--image">
+            <img src="images/pet2.png" alt="Imagem do Pet" class="card__image">
+          </li>
+  
+          <li class="card__item card__item--blue">
+            <img src="images/pet2.png" alt="" class="card__item-thumbnail">
+            <span class="card__item-username">@hope.opersa</span>
+            <p class="card__item-description">
+              A pessoa que encontrar o animal lê o QR code com a câmera e vai aparecer os dados do animal! 
+              Simplesmente amei!!!
+            </p>
+          </li>
+          
+          <li class="card__item card__item--image">
+            <img src="images/pet3.png" alt="Imagem do Pet" class="card__image">
+          </li>
+  
+          <li class="card__item card__item--blue">
+            <img src="images/pet3.png" alt="" class="card__item-thumbnail">
+            <span class="card__item-username">@hope.opersa</span>
+            <p class="card__item-description">
+              A pessoa que encontrar o animal lê o QR code com a câmera e vai aparecer os dados do animal! 
+              Simplesmente amei!!!
+            </p>
+          </li>
+  
+          <li class="card__item card__item--image">
+            <img src="images/pet4.png" alt="Imagem do Pet" class="card__image">
+          </li>
+  
+          <li class="card__item card__item--blue">
+            <img src="images/pet4.png" alt="" class="card__item-thumbnail">
+            <span class="card__item-username">@hope.opersa</span>
+            <p class="card__item-description">
+              A pessoa que encontrar o animal lê o QR code com a câmera e vai aparecer os dados do animal! 
+              Simplesmente amei!!!
+            </p>
+          </li>
+        </ul>
       </div>
 
-      <ul class="cards">
-        <li class="card__item card__item--image">
-          <img src="images/pet1.png" alt="Imagem do Pet" class="card__image">
-        </li>
-
-        <li class="card__item card__item--blue">
-          <img src="images/pet1.png" alt="" class="card__item-thumbnail">
-          <span class="card__item-username">@hope.opersa</span>
-          <p class="card__item-description">
-            A pessoa que encontrar o animal lê o QR code com a câmera e vai aparecer os dados do animal! 
-            Simplesmente amei!!!
-          </p>
-        </li>
-        
-        <li class="card__item card__item--image">
-          <img src="images/pet2.png" alt="Imagem do Pet" class="card__image">
-        </li>
-
-        <li class="card__item card__item--blue">
-          <img src="images/pet2.png" alt="" class="card__item-thumbnail">
-          <span class="card__item-username">@hope.opersa</span>
-          <p class="card__item-description">
-            A pessoa que encontrar o animal lê o QR code com a câmera e vai aparecer os dados do animal! 
-            Simplesmente amei!!!
-          </p>
-        </li>
-        
-        <li class="card__item card__item--image">
-          <img src="images/pet3.png" alt="Imagem do Pet" class="card__image">
-        </li>
-
-        <li class="card__item card__item--blue">
-          <img src="images/pet3.png" alt="" class="card__item-thumbnail">
-          <span class="card__item-username">@hope.opersa</span>
-          <p class="card__item-description">
-            A pessoa que encontrar o animal lê o QR code com a câmera e vai aparecer os dados do animal! 
-            Simplesmente amei!!!
-          </p>
-        </li>
-
-        <li class="card__item card__item--image">
-          <img src="images/pet4.png" alt="Imagem do Pet" class="card__image">
-        </li>
-
-        <li class="card__item card__item--blue">
-          <img src="images/pet4.png" alt="" class="card__item-thumbnail">
-          <span class="card__item-username">@hope.opersa</span>
-          <p class="card__item-description">
-            A pessoa que encontrar o animal lê o QR code com a câmera e vai aparecer os dados do animal! 
-            Simplesmente amei!!!
-          </p>
-        </li>
-      </ul>
     </section>
 
     <section id="comparativo" class="section section--comparativo">
@@ -530,6 +542,50 @@
         }
       });
     }
+
+    window.addEventListener("load", function() {
+    // store tabs variable
+    var myTabs = document.querySelectorAll("ul.tabs > .tab__item");
+
+    function myTabClicks(tabClickEvent) {
+
+      for (var i = 0; i < myTabs.length; i++) {
+        myTabs[i].classList.remove("active");
+      }
+
+      var clickedTab = tabClickEvent.currentTarget; 
+
+      clickedTab.classList.add("active");
+
+      tabClickEvent.preventDefault();
+
+      var myContentPanes = document.querySelectorAll(".tab__content");
+      var myContentImgs = document.querySelectorAll(".tab__thumb");
+
+      for (i = 0; i < myContentPanes.length; i++) {
+        myContentPanes[i].classList.remove("active");
+      }
+
+      for (i = 0; i < myContentImgs.length; i++) {
+        myContentImgs[i].classList.remove("active");
+      }
+
+      var anchorReference = tabClickEvent.target;
+      var activePaneId = anchorReference.getAttribute("href");
+      var activePane = document.querySelector(activePaneId);
+
+      var activeImgId = anchorReference.getAttribute("href") + '-img';
+      var activeImg = document.querySelector(activeImgId);
+
+      activePane.classList.add("active");
+      activeImg.classList.add("active");
+
+    }
+
+    for (i = 0; i < myTabs.length; i++) {
+      myTabs[i].addEventListener("click", myTabClicks)
+    }
+    });
   </script>
 </body>
 </html>
