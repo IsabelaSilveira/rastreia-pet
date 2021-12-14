@@ -76,6 +76,7 @@ p {
   background-color:  #FF8B42;
   padding: 40px 0;
   color: $color-white;
+  text-align: center;
 
   .section__title, 
   p { color: $color-white; }
@@ -102,6 +103,14 @@ p {
   }
   .cta__link-white {
     color:  $color-white;
+  }
+
+  .align-center {
+    display: flex;
+    justify-content: center;
+    img, div {
+      max-width: 100%;
+    }
   }
 }
 
@@ -401,9 +410,23 @@ table {
   }
 
   .comparativo__item {
+    position: sticky;
+    top: 5px;
+    left: 0;
     padding: 10px;
     height: 56px;
+    background-color: #F2F4F8;
 
+    &::after {
+      content: '';
+      width: 1px;
+      background-color: $color-primary;
+      height: 100%;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
   tr:nth-child(even) {
     background-color: #F2F4F8;
@@ -413,6 +436,25 @@ table {
     text-align: center;
   }
 }
+.bg-white {
+  background-color: $color-white;
+}
+.sticky-element {
+  position: sticky;
+  top: 0;
+  left: 0;
+  &::after {
+    content: '';
+    width: 1px;
+    background-color: $color-primary;
+    height: 100%;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
 .icon__true {
   background: url('../images/icon-check.svg') center no-repeat;
   text-indent: -9999px;
@@ -513,6 +555,7 @@ table {
   }
 
   .main__banner {
+    text-align: left;
     padding: 160px 0; 
     .section__ctas { margin: 50px 0 0;}
   }
@@ -621,11 +664,16 @@ table {
     .item-destaque {
       padding: 10px 0;
     }
+    .comparativo__item {
+      background-color: initial;
+      position: initial;
+    }
   }
 
   table th {
     padding: 0;
   }
+
 
   .faq {
     max-width: 70%;
