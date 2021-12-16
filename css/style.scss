@@ -529,6 +529,9 @@ table {
   .container {
     max-width: 720px;
   }
+}
+
+@media (min-width: 992px) {
   .col-2 {
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
@@ -633,7 +636,7 @@ table {
     margin: 50px 0 0 0;
     padding-bottom: 0;
   }
-  .cards::-webkit-scrollbar-track {
+  /*.cards::-webkit-scrollbar-track {
     background-color: $color-neutral;
     border-radius: 10px;
   }
@@ -644,18 +647,18 @@ table {
   .cards::-webkit-scrollbar-thumb {
     background-color: $color-primary;
     border-radius: 10px;
-  }
+  }*/
 
   .card__item {
     margin-right: 30px;
     margin-bottom: 20px;
 
-    &:first-child {
+    /*&:first-child {
       margin-left: 0;
     }
     &:last-child {
       margin-right: 0;
-    }
+    }*/
   }
 
   table {
@@ -678,9 +681,7 @@ table {
   .faq {
     max-width: 70%;
   }
-}
 
-@media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
