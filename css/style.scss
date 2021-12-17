@@ -215,7 +215,7 @@ p {
   padding-bottom: 20px;
 }
 .galeria__item {
-  width: 270px;
+  width: 290px;
   flex-shrink: 0;
 }
 .galeria__frame {
@@ -528,6 +528,16 @@ table {
     }
   }
 }
+@media (min-width: 768px) {
+  .galeria__item {
+    width: 320px;
+    flex-shrink: 0;
+  }
+
+  table {
+    display: table;
+  }
+}
 
 @media (min-width: 992px) {
   .container {
@@ -593,6 +603,9 @@ table {
   .order-1 { order: 1}
   .order-2 { order: 2}
 
+  .galeria__item {
+    width: 320px;
+  }
   .galeria__title{
     margin-top: 20px;
     height: 40px;
