@@ -520,9 +520,6 @@ table {
 }
 
 @media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
 
   .screen-wrapper {
     &::before {
@@ -532,13 +529,10 @@ table {
   }
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
 @media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
   .col-2 {
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
@@ -687,10 +681,6 @@ table {
 
   .faq {
     max-width: 70%;
-  }
-
-  .container {
-    max-width: 960px;
   }
 }
 
