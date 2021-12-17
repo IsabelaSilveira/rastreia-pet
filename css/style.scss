@@ -190,8 +190,8 @@ p {
     width: calc(100vw - 30px);
     height: calc(100vw - 30px);
   }
-
 }
+
 .tab__thumb {
   position: absolute;
   top: -20px;
@@ -523,6 +523,13 @@ table {
   .container {
     max-width: 540px;
   }
+
+  .screen-wrapper {
+    &::before {
+      width: 540px;
+      height: 540px;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -579,8 +586,8 @@ table {
   .screen-wrapper {
     margin-top: 0;
     &::before {
-      width: 490px;
-      height: 490px;
+      width: 450px;
+      height: 450px;
     }
   }  
   .tab__item { margin-bottom: 20px; }
